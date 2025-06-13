@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package vietchain.identity;
+
+option go_package = "VietChain/x/identity/types";
+
+message Identity {
+  string address = 1;
+  string idHash = 2;
+  int64 createdAt = 3;
+}

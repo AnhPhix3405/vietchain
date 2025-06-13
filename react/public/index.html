@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>eKYC SDK</title>
+    <script src="web-sdk-version-3.1.0.0.js"></script>
+    <script src="./lib/VNPTQRBrowserApp.js"></script>
+    <script src="./lib/VNPTBrowserSDKAppV4.0.0.js"></script>
+  </head>
+
+  <body>
+    <div id="ekyc_sdk_intergrated"></div>
+    <script>
+      // customer's config
+      const CALL_BACK_END_FLOW = async (result) => {
+        console.log('result ==>', result);
+      };
+
+      const BACKEND_URL = '';
+      const TOKEN_ID = '';
+      const TOKEN_KEY = '';
+      const ACCESS_TOKEN = '';
+
+      const HAS_BACKGROUND_IMAGE = true;
+      const LIST_TYPE_DOCUMENT = [-1, 4, 5, 6, 7];
+
+      const dataConfig = {
+        BACKEND_URL,
+        TOKEN_ID,
+        TOKEN_KEY,
+        ACCESS_TOKEN,
+        CALL_BACK_END_FLOW,
+        HAS_BACKGROUND_IMAGE,
+        LIST_TYPE_DOCUMENT,
+      };
+
+      window.addEventListener('DOMContentLoaded', function () {
+        if (window.SDK) {
+          window.SDK.launch(dataConfig);
+        }
+      });
+    </script>
+  </body>
+</html>

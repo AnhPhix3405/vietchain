@@ -1,0 +1,95 @@
+.mnemonic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 16px 0;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+}
+
+.mnemonic-word {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+.word-number {
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  margin-right: 8px;
+  min-width: 20px;
+}
+
+.word-text {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: #333;
+}
+
+.warning-box {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.warning-box h3 {
+  margin: 0 0 8px 0;
+  color: #856404;
+}
+
+.warning-box p {
+  margin: 0;
+  color: #856404;
+}
+
+.confirmation-input {
+  margin-bottom: 12px;
+}
+
+.confirmation-input label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.confirmation-input input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.backup-actions,
+.confirmation-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.secondary-button {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}

@@ -1,0 +1,204 @@
+/* eKYC Modal Styles - Center on screen */
+.ekyc-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Higher z-index to ensure it's on top */
+  backdrop-filter: blur(3px); /* Optional: blur background */
+}
+
+.ekyc-modal-content {
+  background: white;
+  border-radius: 16px;
+  padding: 0;
+  width: 90%;
+  max-width: 900px;
+  max-height: 85vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: modalSlideIn 0.3s ease-out;
+  transform: translateY(0);
+}
+
+/* Animation for smooth popup appearance */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.ekyc-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 30px;
+  border-bottom: 2px solid #e9ecef;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.ekyc-modal .modal-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.ekyc-modal .close-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.ekyc-modal .close-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.ekyc-modal .modal-body {
+  padding: 30px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.ekyc-modal .ekyc-info {
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+  border: 2px solid #007bff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+}
+
+.ekyc-modal .ekyc-info p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.ekyc-modal .ekyc-info strong {
+  color: #0056b3;
+  font-weight: 600;
+}
+
+/* eKYC Identity Container */
+.ekyc-identity-container {
+  width: 100%;
+  max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+  margin: 0 auto; /* Căn giữa */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Ngăn overflow */
+}
+
+/* eKYC SDK Integration */
+#ekyc_sdk_intergrated {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 80vh !important;
+  overflow: auto !important;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  background: white;
+}
+
+/* Verify Identity Container */
+.verify-identity-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  max-height: 80vh; /* Giới hạn chiều cao 80% viewport */
+  overflow-y: auto; /* Cho phép scroll dọc */
+  overflow-x: hidden; /* Ẩn scroll ngang */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar styling */
+.verify-identity-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.verify-identity-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.verify-identity-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.verify-identity-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ekyc-modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .ekyc-modal .modal-header {
+    padding: 20px;
+  }
+  
+  .ekyc-modal .modal-body {
+    padding: 20px;
+  }
+  
+  .ekyc-modal .modal-header h3 {
+    font-size: 20px;
+  }
+  
+  .ekyc-identity-container {
+    padding: 10px;
+    max-width: 100%;
+  }
+  
+  #ekyc_sdk_intergrated {
+    max-height: 70vh !important;
+  }
+
+  .verify-identity-container {
+    max-height: 85vh;
+    padding: 15px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ekyc-identity-container {
+    padding: 5px;
+  }
+  
+  #ekyc_sdk_intergrated {
+    max-height: 60vh !important;
+  }
+
+  .verify-identity-container {
+    padding: 10px;
+    max-height: 90vh;
+  }
+}
