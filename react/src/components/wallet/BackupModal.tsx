@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/BackupModal.css'; // Ensure you have styles for the modal
+import '../../styles/BackupModal.css'; // Ensure you have styles for the modal
 interface BackupModalProps {
   isOpen: boolean;
   onClose: () => void;

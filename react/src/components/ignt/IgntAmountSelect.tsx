@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useMemo, useRef, useState } from "react";
-import { useDenomContext } from "../def-hooks/denomContext";
-import { Amount } from "../utils/interfaces";
+import { useDenomContext } from "../../def-hooks/denomContext";
+import { Amount } from "../../utils/interfaces";
 import { IgntAddIcon, IgntSearchIcon, IgntModal, IgntClearIcon } from "@ignt/react-library";
 import IgntAmountInputRow from "./IgntAmountInputRow";
 import IgntDenom from "./IgntDenom";

@@ -1,5 +1,5 @@
 import EkycSDK from "./EkycSDK";
-import '../styles/ekyc.css';
+import '../../styles/ekyc.css';
 interface EkycIdentityProps {
   onEkycResult?: (result: any) => void;
   identityData?: any;

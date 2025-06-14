@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import useCosmosBaseTendermintV1Beta1 from "../hooks/useCosmosBaseTendermintV1Beta1";
-import { useConnectionStatus } from "../def-hooks/useConnectionStatus";
+import useCosmosBaseTendermintV1Beta1 from "../../hooks/useCosmosBaseTendermintV1Beta1";
+import { useConnectionStatus } from "../../def-hooks/useConnectionStatus";
 import {
   useClipboard,
   IgntProfileIcon,
@@ -10,8 +10,8 @@ import {
   IgntChevronRightIcon,
   IgntExternalArrowIcon,
 } from "@ignt/react-library";
-import { useAddressContext } from "../def-hooks/addressContext";
-import { Wallet } from "../utils/interfaces";
+import { useAddressContext } from "../../def-hooks/addressContext";
+import { Wallet } from "../../utils/interfaces";
 import { useEffect, useRef, useState } from "react";
 
 interface IgntAccDropdownProps {

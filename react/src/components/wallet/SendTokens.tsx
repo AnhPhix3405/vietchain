@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { usePhiWallet } from '../hooks/usePhiWallet';
-import { useWalletContext } from '../def-hooks/walletContext';
-import { useWalletUnlock } from '../hooks/useWalletUnlock'; // 🆕 Import custom hook
+import { usePhiWallet } from '../../hooks/usePhiWallet';
+import { useWalletContext } from '../../def-hooks/walletContext';
+import { useWalletUnlock } from '../../hooks/useWalletUnlock'; // 🆕 Import custom hook
 import { TransactionSigning } from './TransactionSigning';
 import { PasswordModal } from './PasswordModal';
 import { BackupModal } from './BackupModal'; // 🆕 Import BackupModal
 import { requiresPassword, isEncryptedWallet ,
   getWalletType
-} from '../utils/walletHelpers';
-import "../styles/advanced-feature.css"
+} from '../../utils/walletHelpers';
+import "../../styles/advanced-feature.css"
 
 type ConnectionStatus = 
   | 'no-wallet'

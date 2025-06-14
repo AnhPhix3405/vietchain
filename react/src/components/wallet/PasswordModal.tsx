@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/PasswordModal.css';
+import '../../styles/PasswordModal.css';
 
 interface PasswordModalProps {
   isOpen: boolean;

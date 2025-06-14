@@ -1,6 +1,6 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 
-import IgntHeader from "../components/IgntHeader";
+import IgntHeader from "../components/ignt/IgntHeader";
 import DataView from "../views/DataView";
 import PortfolioView from "../views/PortfolioView";
 import WalletView from "../views/WalletView";

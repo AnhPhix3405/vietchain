@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { useWalletContext } from '../def-hooks/walletContext';
-import IgntCard from '../components/IgntCard';
-import CreateIdentity from '../components/CreateIdentity';
-import VerifyIdentity from '../components/VerifyIdentity';
-import EkycIdentity from '../components/EkycIdentity';
+import IgntCard from '../components/ignt/IgntCard';
+import CreateIdentity from '../components/identity/CreateIdentity';
+import VerifyIdentity from '../components/identity/VerifyIdentity';
+import EkycIdentity from '../components/identity/EkycIdentity';
 import '../styles/identity.css';
 
 export default function IdentityView() {
   const { activeWallet } = useWalletContext();
   const [activeTab, setActiveTab] = useState<'create' | 'ekyc' | 'verify'>('create');
   const [tempIdentityData, setTempIdentityData] = useState<any>(null);
-  const [ekycResult, setEkycResult] = useState<any>(null); // 🆕 State để lưu kết quả eKYC
+  const [ekycResult, setEkycResult] = useState<any>(null);
+
+  // 🆕 Function để reset all data và quay về create tab
+  const resetToCreateTab = () => {
+    console.log('🔄 Resetting to create tab...');
+    setActiveTab('create');
+    setTempIdentityData(null);
+    setEkycResult(null);
+  };
 
   if (!activeWallet) {
     return (
@@ -93,6 +101,7 @@ export default function IdentityView() {
                 console.log('🎯 Verification completed:', result);
                 // Xử lý kết quả verification
               }}
+              onNavigateAway={resetToCreateTab} // 🆕 Pass callback
             />
           )}
         </div>

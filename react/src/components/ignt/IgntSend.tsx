@@ -4,12 +4,12 @@ import BigNumber from "bignumber.js";
 import { fromBech32 } from "@cosmjs/encoding";
 import cx from "classnames";
 import { useMemo, useState } from "react";
-import { useAddressContext } from "../def-hooks/addressContext";
-import { useClient } from "../hooks/useClient";
-import { Amount } from "../utils/interfaces";
+import { useAddressContext } from "../../def-hooks/addressContext";
+import { useClient } from "../../hooks/useClient";
+import { Amount } from "../../utils/interfaces";
 import { IgntChevronDownIcon, IgntButton } from "@ignt/react-library";
 import IgntAmountSelect from "./IgntAmountSelect";
-import { useAssets } from "../def-hooks/useAssets";
+import { useAssets } from "../../def-hooks/useAssets";
 import Long from "long";
 
 interface IgntSendProps {

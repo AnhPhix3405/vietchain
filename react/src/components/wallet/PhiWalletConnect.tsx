@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useDispatchWalletContext, useWalletContext } from "../def-hooks/walletContext";
-import { usePhiWallet } from "../hooks/usePhiWallet";
-import { BLOCKCHAIN_CONFIG } from "../config/blockchain";
+import { useDispatchWalletContext, useWalletContext } from "../../def-hooks/walletContext";
+import { usePhiWallet } from "../../hooks/usePhiWallet";
+import { BLOCKCHAIN_CONFIG } from "../../config/blockchain";
 import {
   IgntButton,
   IgntModal,

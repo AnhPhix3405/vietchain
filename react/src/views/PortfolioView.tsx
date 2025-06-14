@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from "react";
-import IgntAssets from "../components/IgntAssets";
-import IgntTransactions from "../components/IgntTransactions";
-import IgntTransfer from "../components/IgntTransfer";
+import IgntAssets from "../components/ignt/IgntAssets";
+import IgntTransactions from "../components/ignt/IgntTransactions";
+import IgntTransfer from "../components/ignt/IgntTransfer";
 import { useClient } from "../hooks/useClient";
 import { useAddressContext } from "../def-hooks/addressContext";
 

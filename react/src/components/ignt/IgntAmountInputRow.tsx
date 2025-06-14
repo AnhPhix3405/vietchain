@@ -1,6 +1,6 @@
-import { Amount } from "../utils/interfaces";
+import { Amount } from "../../utils/interfaces";
 import cx from "classnames";
-import { useAsset } from "../def-hooks/useAsset";
+import { useAsset } from "../../def-hooks/useAsset";
 import BigNumber from "bignumber.js";
 import { useEffect, useMemo, useState } from "react";
 import { IgntAmountInput } from "@ignt/react-library";

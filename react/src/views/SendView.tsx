@@ -1,6 +1,6 @@
 import { useWalletContext } from "../def-hooks/walletContext";
 import { IgntCard } from "@ignt/react-library";
-import SendTokens from "../components/SendTokens";
+import SendTokens from "../components/wallet/SendTokens";
 
 export default function SendView() {
   const { activeWallet } = useWalletContext();

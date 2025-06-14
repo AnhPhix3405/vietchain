@@ -1,4 +1,4 @@
-import { useAddressContext } from "../def-hooks/addressContext";
+import { useAddressContext } from "../../def-hooks/addressContext";
 import { IgntCard, IgntClipboard, IgntQRCode, IgntTabs } from "@ignt/react-library";
 import IgntSend from "./IgntSend";
 interface IgntTransferProps {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { usePhiWallet } from '../hooks/usePhiWallet';
+import { usePhiWallet } from '../../hooks/usePhiWallet';
 
 interface TransactionData {
   recipient: string;

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useDenom } from "../def-hooks/useDenom";
+import { useDenom } from "../../def-hooks/useDenom";
 
 import "./IgntDenom.css";
 

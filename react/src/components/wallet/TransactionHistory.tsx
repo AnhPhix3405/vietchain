@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { useWalletContext } from "../def-hooks/walletContext";
-import { usePhiWallet } from "../hooks/usePhiWallet";
+import { useWalletContext } from "../../def-hooks/walletContext";
+import { usePhiWallet } from "../../hooks/usePhiWallet";
 import { IgntCard, IgntButton } from "@ignt/react-library";
-import { BLOCKCHAIN_CONFIG } from "../config/blockchain";
+import { BLOCKCHAIN_CONFIG } from "../../config/blockchain";
 
 interface Transaction {
   hash: string;

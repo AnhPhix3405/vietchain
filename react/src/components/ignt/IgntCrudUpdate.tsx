@@ -1,16 +1,18 @@
 import { useMemo, useState } from "react";
-import { useAddressContext } from "../def-hooks/addressContext";
-import { useClient } from "../hooks/useClient";
+import { useAddressContext } from "../../def-hooks/addressContext";
+import { useClient } from "../../hooks/useClient";
 import { IgntModal } from "@ignt/react-library";
-interface IgntCrudCreateProps {
+
+interface IgntCrudUpdateProps {
   className?: string;
   storeName: string;
   itemName: string;
+  itemData: any;
   commandName: string;
   close: () => void;
 }
-export default function IgntCrudCreate(props: IgntCrudCreateProps) {
-  const [formData, setFormData] = useState<any>({});
+export default function IgntCrudUpdate(props: IgntCrudUpdateProps) {
+  const [formData, setFormData] = useState<any>(props.itemData);
   const { address } = useAddressContext();
   const client = useClient();
   // computed
@@ -29,7 +31,7 @@ export default function IgntCrudCreate(props: IgntCrudCreateProps) {
   );
   const creator = address;
 
-  const submitItem = async () => {
+  const editItem = async () => {
     await (
       client[
         props.storeName as keyof Omit<
@@ -38,25 +40,25 @@ export default function IgntCrudCreate(props: IgntCrudCreateProps) {
         >
       ] as any
     ).tx[props.commandName]({
-      value: { ...formData, creator },
+      value: { ...formData, creator, id: props.itemData.id },
     });
     props.close();
   };
   return (
     <IgntModal
       visible={true}
-      title={`Create ${props.itemName}`}
+      title={`Edit ${props.itemName}`}
       closeIcon={true}
       submitButton={true}
       cancelButton={true}
       className="text-center"
       close={() => props.close()}
-      submit={submitItem}
+      submit={editItem}
       body={
         <>
           <div className="my-4" />
           {itemFieldsFiltered.map((field) => (
-            <div key={"create_field_" + field.name}>
+            <div key={"update_field_" + field.name}>
               <label htmlFor={`p${field.name}`} className="block text-sm text-left text-gray-400 mb-1 capitalize">
                 {field.name}
               </label>

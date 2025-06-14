@@ -1,5 +1,5 @@
-import { useAddressContext } from "../def-hooks/addressContext";
-import { useClient } from "../hooks/useClient";
+import { useAddressContext } from "../../def-hooks/addressContext";
+import { useClient } from "../../hooks/useClient";
 import { IgntButton, IgntModal, IgntTrashIcon } from "@ignt/react-library";
 
 interface IgntCrudDeleteProps {

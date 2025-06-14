@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useWalletContext } from '../def-hooks/walletContext';
-import { usePhiWallet } from '../hooks/usePhiWallet';
+import { useWalletContext } from '../../def-hooks/walletContext';
+import { usePhiWallet } from '../../hooks/usePhiWallet';
 
 interface MyIdentityProps {
   onRefresh?: () => void;

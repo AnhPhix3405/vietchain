@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
-import { useAssets } from "../def-hooks/useAssets";
-import { useDenomContext } from "../def-hooks/denomContext";
+import { useAssets } from "../../def-hooks/useAssets";
+import { useDenomContext } from "../../def-hooks/denomContext";
 import IgntDenom from "./IgntDenom";
-import { useAddressContext } from "../def-hooks/addressContext";
+import { useAddressContext } from "../../def-hooks/addressContext";
 import { IgntSearchIcon, IgntClearIcon, IgntArrowIcon } from "@ignt/react-library";
 import { ChangeEvent, useRef, useState } from "react";
 

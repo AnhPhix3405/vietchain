@@ -4,9 +4,9 @@ import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
 import { toBase64 } from "@cosmjs/encoding";
 import { TxRaw } from "cosmjs-types/cosmos/tx/v1beta1/tx";
 import { Registry } from "@cosmjs/proto-signing";
-import { decryptMnemonic } from '../wallet';
-import { useWalletContext } from '../def-hooks/walletContext';
-import { isEncryptedWallet } from '../utils/walletHelpers';
+import { decryptMnemonic } from '../../wallet';
+import { useWalletContext } from '../../def-hooks/walletContext';
+import { isEncryptedWallet } from '../../utils/walletHelpers';
 
 interface UpdateIdentityProps {
   onIdentityUpdated: (identity: any) => void;

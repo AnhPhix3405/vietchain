@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { usePhiWallet } from '../hooks/usePhiWallet';
-import { useWalletContext } from '../def-hooks/walletContext';
-import { createWalletWithPassword, formatMnemonicForDisplay } from '../wallet';
-import '../styles/wallet.css'
+import { usePhiWallet } from '../../hooks/usePhiWallet';
+import { useWalletContext } from '../../def-hooks/walletContext';
+import { createWalletWithPassword, formatMnemonicForDisplay } from '../../wallet';
+import '../../styles/wallet.css'
 interface CreateWalletProps {
   onClose: () => void;
   onWalletCreated?: (address: string) => void;

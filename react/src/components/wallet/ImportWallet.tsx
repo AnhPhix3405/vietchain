@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { usePhiWallet } from '../hooks/usePhiWallet';
-import { useWalletContext } from '../def-hooks/walletContext';
-import { validateMnemonic, formatMnemonicForDisplay, importWalletWithPassword } from '../wallet';
-import '../styles/wallet.css'
-import { BLOCKCHAIN_CONFIG } from '../config/blockchain';
+import { usePhiWallet } from '../../hooks/usePhiWallet';
+import { useWalletContext } from '../../def-hooks/walletContext';
+import { validateMnemonic, formatMnemonicForDisplay, importWalletWithPassword } from '../../wallet';
+import '../../styles/wallet.css'
+import { BLOCKCHAIN_CONFIG } from '../../config/blockchain';
 
 interface ImportWalletProps {
   onClose: () => void;
